@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Bem vindo!</h1>
+    <h2>Escolha o que deseja fazer.</h2>
+
+    <button onclick="calculadora()" id="calculadora">CALCULADORA</button>
+    <br>
+    <button onclick="tabuada()" id="tabuada">TABUADA</button>
+    <br>
+    <button onclick="voltar()" id="voltar" style="display: none;">VOLTAR</button>
+
+    <div id="divCalculadora" style="display: none;">
+        <br>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+    </div>
+
+    <div id="divTabuada" style="display: none;">
+        <br>
+        <input type="number" id="num">
+        <br>
+        <input type="number" id="vezes">
+    </div>
+
+    <div id="divInput" style="display: none;">
+        <br>
+        <input type="button" onclick="adicao()" value="+">
+        <input type="button" onclick="subtracao()" value="-">
+        <input type="button" onclick="multiplicacao()" value="x">
+        <input type="button" onclick="divisao()" value="/">
+    </div>
+
+    <p id="reCal" style="display: none;"></p>
+    
+    <div id="reTab" style="display: none;">
+        <p></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
