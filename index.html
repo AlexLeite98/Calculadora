@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="Pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
+
 <body>
-    <h1>Bem vindo!</h1>
-    <h2>Escolha o que deseja fazer.</h2>
+    <nav id="menu">
+        <h2>ESCOLHA O QUE DESEJA.</h2>
 
-    <button onclick="calculadora()" id="calculadora">CALCULADORA</button>
-    <br>
-    <button onclick="tabuada()" id="tabuada">TABUADA</button>
-    <br>
-    <button onclick="voltar()" id="voltar" style="display: none;">VOLTAR</button>
+        <ul>
+            <li><a href="#calculadora" id="a1">CALCULADORA</a></li>
+            <li><a href="#tabuada" id="a2">TABUADA</a></li>
+        </ul>
+    </nav>
 
-    <div id="divCalculadora" style="display: none;">
-        <br>
-        <input type="number" id="num1">
-        <input type="number" id="num2">
-    </div>
+    <section id="calculadora">
+        <h2>CALCULADORA</h2>
 
-    <div id="divTabuada" style="display: none;">
-        <br>
-        <input type="number" id="num">
-        <br>
-        <input type="number" id="vezes">
-    </div>
+        <div id="divCalculadora">
+            <p id="reCal">0</p>
+            <input type="number" id="num1">
+            <input type="number" id="num2">
 
-    <div id="divInput" style="display: none;">
-        <br>
-        <input type="button" onclick="adicao()" value="+">
-        <input type="button" onclick="subtracao()" value="-">
-        <input type="button" onclick="multiplicacao()" value="x">
-        <input type="button" onclick="divisao()" value="/">
-    </div>
+        </div>
 
-    <p id="reCal" style="display: none;"></p>
-    
-    <div id="reTab" style="display: none;">
-        <p></p>
-    </div>
+        <div id="divInput">
+            <input type="button" onclick="adicao()" value="+">
+            <input type="button" onclick="subtracao()" value="-">
+            <input type="button" onclick="multiplicacao()" value="x">
+            <input type="button" onclick="divisao()" value="/">
+        </div>
+    </section>
+
+    <section id="tabuada">
+        <h2>TABUADA</h2>
+
+        <div id="divTabuada">
+            <input type="number" id="num">
+            <input type="number" id="vezes">
+        </div>
+
+        <div id="but">
+            <button onclick="tabu()">Click</button>
+        </div>
+
+        <div id="reTab">
+            <p id="som">0</p>
+            <p id="sub">0</p>
+            <p id="mul">0</p>
+            <p id="div">0</p>
+        </div>
+        <br><br>
+    </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>
